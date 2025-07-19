@@ -83,12 +83,17 @@ cd inbox-cleaner
 
 1. Visit [Google Cloud Console](https://console.cloud.google.com/)
 2. Create a new project
+3. Once in the project, open the left sidebar go to **APIs & Services** then **Library**
 3. Enable the **Gmail API**
-4. Go to **OAuth Consent Screen**, set user type to *External*, fill it out (name, email)
 5. Go to **Credentials** → "Create Credentials" → *OAuth Client ID*
-
+   **Gmail API**
+   **User Data**
+   - I just added all scopes, wasn't reading through all of that
    * App Type: **Desktop App**
 6. Download the `credentials.json` file and place it in the project root
+7. Go back to [Google Cloud Console](https://console.cloud.google.com/) and navigate through left sidebar to **APIs & Services** -> **oAuth consent screen**
+8. Within Audience add your email you're using to login with (I just use the same one I'm cleaning) That's you all setup then, close the cloud console.
+9. When logging in, it'll say you're using an unverified app - you can click continue. 
 
 ### 3. Install Requirements
 
