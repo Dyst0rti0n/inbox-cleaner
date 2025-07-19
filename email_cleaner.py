@@ -35,7 +35,7 @@ def authenticate(creds_path='credentials.json', token_path='token.json'):
     service = build('gmail', 'v1', credentials=creds)
     return service
 
-def list_subscriptions(service, query: str = 'unsubscribe', max_results: int = 100):
+def list_subscriptions(service, query: str = 'unsubscribe', max_results: int = 100, include_unsubscribed: bool = False):
     unsubscribed = get_unsubscribed()
     blocked = get_blocked_addresses(service)
 
@@ -62,14 +62,16 @@ def list_subscriptions(service, query: str = 'unsubscribe', max_results: int = 1
 
         if any(blocked_email in email for blocked_email in blocked):
             continue
-        if email in unsubscribed:
+        already_unsub = email in unsubscribed
+        if already_unsub and not include_unsubscribed:
             continue
 
         subs.append({
             'id': msg['id'],
             'from': sender,
             'subject': headers.get('Subject', ''),
-            'unsubscribe': headers.get('List-Unsubscribe', '')
+            'unsubscribe': headers.get('List-Unsubscribe', ''),
+            'already_unsub': already_unsub
         })
 
     return subs

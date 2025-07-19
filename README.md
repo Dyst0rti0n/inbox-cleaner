@@ -144,11 +144,13 @@ It’ll create a `token.json` file for future runs (you’ll only need to auth o
 
 ## QoLI (In Progress)
 
-* [ ] Add "Refresh Inbox" button to reload subscriptions live
-* [ ] Highlight already-unsubscribed senders visually
-* [ ] Add search/filter bar to quickly find specific brands
+* [x] Add "Refresh Inbox" button to reload subscriptions live
+* [x] Highlight already-unsubscribed senders visually
+* [x] Add search/filter bar to quickly find specific brands
 * [ ] Save unsubscribed/blocked sender emails to local cache (e.g. JSON or SQLite)
-* [ ] Confirmations in GUI for completed actions (e.g. "Unsubscribed from X")
+* [x] Confirmations in GUI for completed actions (e.g. "Unsubscribed from X")
+
+* Messed up UI whilst integrations these
 
 ---
 
