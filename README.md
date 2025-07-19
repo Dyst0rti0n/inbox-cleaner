@@ -53,23 +53,6 @@ This is the email cleaner **I wish Gmail shipped by default**.
 
 ---
 
-## Preview
-
-```
-
-CyberInbox Cleaner GUI
-┌──────────────────────────────┬──────────────────────────────────────┬────────────────────────────────────────────┐
-│          Brand               │               Subject                │             Unsubscribe Link               │
-├──────────────────────────────┼──────────────────────────────────────┼────────────────────────────────────────────┤
-│    [newsletter@annoying.com](mailto:newsletter@annoying.com)   │ "🔥🔥🔥 Hottest Deals Just for YOU!"  │ [http://unsubscribe.bait.click](http://unsubscribe.bait.click)           │
-└──────────────────────────────┴──────────────────────────────────────┴────────────────────────────────────────────┘
-
-\[📨 Unsubscribe Selected]   \[🚫 Block Selected]
-
-````
-
----
-
 ## 🛠️ Installation
 
 ### 1. Clone the Repo
@@ -93,7 +76,7 @@ cd inbox-cleaner
 6. Download the `credentials.json` file and place it in the project root
 7. Go back to [Google Cloud Console](https://console.cloud.google.com/) and navigate through left sidebar to **APIs & Services** -> **oAuth consent screen**
 8. Within Audience add your email you're using to login with (I just use the same one I'm cleaning) That's you all setup then, close the cloud console.
-9. When logging in, it'll say you're using an unverified app - you can click continue. 
+9. When logging in, it'll say you're using an unverified app - you can click continue.
 
 ### 3. Install Requirements
 
